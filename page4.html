@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia</title>
+    </head>
+    <body>
+        <h3>Trivia!</h3>
+        <br></br>
+
+        <div class="alert alert-info" role="alert">
+         Here is a fun trivia question to try out!
+        </div>
+
+        <h5>What is the name for a 9 sided polygon?</h5>
+        <input id="answer" align="middle"></input>
+
+        <h5 id="result"></h5>
+
+        <button id="b" align="middle">Check Answer</button>
+
+        <script>
+            document.querySelector('#b').onclick = function() {
+                text = document.querySelector('#answer').value
+                if (text == "Nonagon" || text == "nonagon")
+                {
+                    document.querySelector('#answer').style.backgroundColor = 'green';
+                    document.querySelector('#result').innerHTML = "Correct";
+                }
+                else
+                {
+                    document.querySelector('#answer').style.backgroundColor = 'red';
+                    document.querySelector('#result').innerHTML = "Incorrect";
+                }
+            }
+        </script>
+
+        <h4>
+            <u>Useful Links</u>
+        </h4>
+        <a href="index.html"> Back to Home Page </a>
+        <a href="page2.html"> Cars </a>
+        <a href="page3.html"> Phones </a>
+    </body>
+</html>
